@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Prompts You</title>
+<link rel="stylesheet" href="styles.css">
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+<div class="container">
+    <div class="left-panel">
+        <div class="section">
+            <select class="dropdown" id="phaseDropdown">
+                <option value="title">Title</option>
+                <option value="outline">Outline</option>
+                <option value="article">Article</option>
+            </select>
+            <select class="dropdown" id="typeDropdown">
+                <option value="blog">Blog Article</option>
+            </select>
+        </div>
+        <label for="inputBox" style="font-size: 16px; font-weight: bold; margin-bottom: 10px; display: block;" id="input-label">Your topic and target market</label>
+        <textarea id="inputBox" class="input-box" placeholder="e.g. I'm writing an article about cats targeted at cat owners"></textarea>
+        <button type="button" id="submitButton" style="margin-top: 20px; padding: 10px 20px; font-size: 16px; background-color: #3a784d; color: #fffefd; border: none; border-radius: 5px; cursor: pointer;">Submit</button>
+        <div id="loadingIndicator">
+            <div class="line"></div>
+        </div>        
+    </div>
+    <div class="right-panel">
+        <div class="assistant-section">
+            <img src="assets/linky.webp" alt="Assistant Icon">
+            <select class="assistant-name">
+                <!-- Options will be populated by JavaScript -->
+            </select>
+        </div>
+        <div class="assistant-speech">
+            Hello, I am here to help you write an article. The first step is to find something good to write about. A catchy title that inspires both you and me.<br><br> What topic do you want to write about?<br><br> Who are you writing for?    
+        </div>
+        <div class="button-container">
+            <button class="feedback-button yes" id="feedback-yes">Yes</button>
+            <button class="feedback-button no" id="feedback-no">No</button>
+        </div>
+        <div class="output">
+        </div>
+    </div>
+</div>
+<script src="script.js" defer></script>
+</body>
+</html>
