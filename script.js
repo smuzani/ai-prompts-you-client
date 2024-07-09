@@ -126,7 +126,7 @@ $(document).ready(function () {
                     $('.assistant-speech').html(assistant.speechFeedback);
                     $('.button-container').css('display', 'flex');
                     $('#feedback-yes').on('click', function () {
-                        $('.assistant-speech').html(speechFeedbackYesOutline);
+                        $('.assistant-speech').html(assistant.speechFeedbackYesOutline);
                         $('.button-container').css('display', 'none');
                         $('#phaseDropdown').val('article').trigger('change');
                         $('#inputBox').val(formattedText.trim());
